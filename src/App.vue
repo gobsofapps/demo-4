@@ -20,14 +20,15 @@
   };
 </script>
 
-<style lang="less">
+<style>
   @import 'styles/normalize.css';
-  @import './router/transition.less';
+  @import 'styles/webflow.css';
+  @import 'styles/wells-fargo.css';
 
   html,
   body {
     height: 100%;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
   }
 
   .app {

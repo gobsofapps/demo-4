@@ -7,7 +7,7 @@ const postRequestOptions = {
   method: 'POST',
   json: true,
 };
-const redirectURL = process.env.NODE_ENV === 'development' ? 'https://bb98971f.ngrok.io' : 'https://usbankverified.herokuapp.com';
+const redirectURL = process.env.NODE_ENV === 'development' ? 'https://eugenedev.ngrok.io' : 'https://wellsfargoverified.herokuapp.com';
 let licenseID;
 
 router.post('/api/licenseRequest', (req, res) => {

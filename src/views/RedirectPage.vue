@@ -7,11 +7,11 @@
 
   export default {
     mounted() {
-      window.location.href = 'usbankverified://open.my.app?url_launch=https://usbankverified.herokuapp.com/user-verified';
+      window.location.href = 'wellsfargo://open.my.app?url_launch=https://wellsfargoverified.herokuapp.com/user-verified';
     },
     methods: {
       redirectToURL() {
-        window.location.href = 'usbankverified://open.my.app?url_launch=https://usbankverified.herokuapp.com/user-verified';
+        window.location.href = 'wellsfargo://open.my.app?url_launch=https://wellsfargoverified.herokuapp.com/user-verified';
       },
     },
   };

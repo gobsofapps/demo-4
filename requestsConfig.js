@@ -26,11 +26,11 @@ module.exports = {
         ],
       },
       displayText: {
-        en: 'Please share your information with U.S. Bank',
+        en: 'Please share your information with Wells Fargo',
         fr: 'French Display Text',
       },
       defaultLang: 'en',
-      licenseNotificationUrl: 'https://usbankverified.herokuapp.com/api/licenseNotify',
+      licenseNotificationUrl: 'https://wellsfargoverified.herokuapp.com/api/licenseNotify',
       state: 'opaque state data',
     },
   },

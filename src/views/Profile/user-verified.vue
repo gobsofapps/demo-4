@@ -1,97 +1,79 @@
 <template>
-  <div class="container">
-    <div class="verified">
-      <div class="verified-icon"></div>
-      <h3>Identity Verified! You will be redirected to you account in a minute
-        <span class="dot">.</span>
-        <span class="dot">.</span>
-        <span class="dot">.</span>
-      </h3>
-    </div>
+<div class="main">
+  <div class="loader">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64" height="64" fill="white">
+      <circle cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(45 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.125s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(90 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.25s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(135 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.375s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(180 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.5s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(225 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.625s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(270 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.75s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(315 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.875s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+      <circle transform="rotate(180 16 16)" cx="16" cy="3" r="0">
+        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
+                 begin="0.5s"
+                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                 calcMode="spline"
+        />
+      </circle>
+    </svg>
   </div>
+  <h4 class="heading-3">Wait a moment, while your data is loading...</h4>
+</div>
 </template>
-
 <script>
-  import { mapActions } from 'vuex';
-  import BankHeader from '../../components/header';
-
   export default {
-    components: {
-      BankHeader,
-    },
-    ...mapActions({
-      getUser: 'getUserData',
-    }),
     created() {
       this.$store.dispatch('getUserData');
     },
   };
 </script>
-
-
-<style scoped lang="less">
-  @title-color: #0c2074;
-
-  header {
-    height: 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-  }
-
-  .verified {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    max-width: 450px;
-    padding: 20px;
-    height: 300px;
-
-    .verified-icon {
-      width: 100%;
-      height: 150px;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url('../../assets/icons/verified-approve.svg');
-    }
-
-    h3 {
-      color: @title-color;
-      text-align: center;
-    }
-  }
-
-  .dot {
-    animation-name: blink;
-    animation-duration: 1.4s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-  }
-
-  .dot:nth-child(2) {
-    animation-delay: .2s;
-  }
-
-  .dot:nth-child(3) {
-    animation-delay: .4s;
-  }
-
-  @keyframes blink {
-    0% {
-      opacity: .2;
-    }
-    20% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .2;
-    }
-  }
-</style>

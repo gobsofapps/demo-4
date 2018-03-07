@@ -1,7 +1,7 @@
 {
-  "name": "partner-portal",
+  "name": "wells-fargo",
   "version": "1.1.2",
-  "description": "Partners portal Verified.Me",
+  "description": "Wells-Fargo Verified.Me",
   "author": "SecureKey",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
     "body-parser": "^1.18.2",
     "connect-history-api-fallback": "^1.5.0",
     "express": "^4.16.2",
+    "jquery": "^3.3.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "vue": "^2.5.2",
