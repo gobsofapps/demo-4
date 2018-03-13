@@ -439,6 +439,7 @@
 
 .profile {
   font-family: Varela, sans-serif;
+  padding-bottom: 80px;
 }
 
 .form-2 {
@@ -456,9 +457,11 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 15px;
   text-decoration: none;
   text-align: center;
   color: #fff;
+  border-radius: 5px;
 }
 
 .welcome-image {
