@@ -1,17 +1,17 @@
 <template>
   <div class="redirect-button" @click="redirectToURL()">
-    Go back to the U.S. Bank app
+    Go back to the Bank of America app
   </div>
 </template>
 <script>
 
   export default {
     mounted() {
-      window.location.href = 'wellsfargo://open.my.app?url_launch=https://wellsfargoverified.herokuapp.com/user-verified';
+      window.location.href = 'bankofamerica://open.my.app?url_launch=https://bankofamericaverified.herokuapp.com/user-verified';
     },
     methods: {
       redirectToURL() {
-        window.location.href = 'wellsfargo://open.my.app?url_launch=https://wellsfargoverified.herokuapp.com/user-verified';
+        window.location.href = 'bankofamerica://open.my.app?url_launch=https://bankofamericaverified.herokuapp.com/user-verified';
       },
     },
   };

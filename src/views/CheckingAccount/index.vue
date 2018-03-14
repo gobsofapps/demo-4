@@ -1,21 +1,42 @@
 <template>
-<div class="body" v-if="QR">
-  <h4 class="checking-acount-header">Checking Account</h4>
-  <div class="hero-image">
-    <h3 class="heading">Everyday Checking</h3>
-    <div class="sub-header">Banking made easy. Open with $25.</div>
-    <div class="text-link">How to avoid the $10 monthly service fee</div>
-    <div class="text-link">Common fees for this account (PDF)</div>
-    <a :href="QR.signInQRCode" class="open-checking-account verified w-button">Open with Verified.Me</a>
-    <a href="#" class="open-checking-account w-button">Go to Form</a>
-    <div class="details-text">Everyday Checking Details &gt;</div>
-  </div><a class="compare-acounts-button w-button">Compare All Accounts</a>
-  <h3 class="heading-2">Checking Account Benefits</h3>
-  <div class="convenience-section">
-    <h3 class="convenience-header">Convenience and Control</h3>
-    <p>Our mobile banking app puts you in control of your accounts.</p>
-    <div class="more-link">More Checking Accounts &gt;</div>
-  </div>
+  <div v-if="QR">
+    <div class="checking-header">
+      <h4 class="checking-heading">Checking Accounts</h4>
+    </div>
+    <div class="hero-image">
+      <div class="bank-comparison">
+        <h4 class="bank-comparison__heading">Banking wherever and whenever you need it</h4>
+        <div>Account access at our network of financial centers, online or on the go</div><a href="#" class="button w-button">Compare Accounts</a></div>
+    </div>
+    <div class="checking-choices">
+      <div class="checking-choices__choice">
+        <h4 class="choice-header">I want to keep it simple</h4>
+        <h4 class="choice-header red">Bank of America Core Checking</h4>
+        <div class="choice-text">A straightforward personal checking solution - good for those with direct deposit.</div>
+        <div class="choice-text money">$12 or $0 monthly fee</div>
+        <div class="choice-text">Minimum balance or qualifying direct deposit required for the $0 monthly fee</div>
+        <div class="choice-text blue">View more details</div>
+        <div class="choice-buttons">
+          <a :href="QR.signInQRCode" class="choice-buttons__button verified w-button">Open with Verified.Me</a>
+          <a href="#" class="choice-buttons__button w-button">Go to Form</a></div>
+        <div class="student-discount"><img src="../../assets/student.svg" width="70" class="image">
+          <div class="text-block-2">Student? We&#x27;ll waive the monthly maintenance fee.<br><a>Learn more about eligibility</a></div>
+        </div>
+      </div>
+      <div class="checking-choices__choice">
+        <h4 class="choice-header">I want to keep it simple</h4>
+        <h4 class="choice-header red">Bank of America Interest Checking</h4>
+        <div class="choice-text">For those who keep high balances and want multiple interest-earning accounts with complimentary services.</div>
+        <div class="choice-text money">$25 or $0 monthly fee</div>
+        <div class="choice-text">Minimum balance required for the $0 monthly fee</div>
+        <div class="choice-text blue">View more details</div>
+        <div class="choice-buttons">
+          <a :href="QR.signInQRCode" class="choice-buttons__button verified w-button">Open with Verified.Me</a>
+          <a href="#" class="choice-buttons__button w-button">Go to Form</a></div>
+      </div>
+    </div>
+    <h4 class="checking-subheader">Not sure? Compare checking accounts</h4>
+    <h4 class="checking-subheader second">Small business owners, <a class="link">search checking options</a> for your business</h4>
   </div>
 </template>
 <script>

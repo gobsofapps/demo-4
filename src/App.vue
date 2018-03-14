@@ -23,12 +23,12 @@
 <style>
   @import 'styles/normalize.css';
   @import 'styles/webflow.css';
-  @import 'styles/wells-fargo.css';
+  @import 'styles/bank-of-america.css';
 
   html,
   body {
-    height: 100%;
-    font-family: Verdana, Geneva, sans-serif;
+    padding-bottom: 53px;
+    font-family: 'PT Sans', sans-serif;
   }
 
   .app {

@@ -30,7 +30,7 @@ module.exports = {
         fr: 'French Display Text',
       },
       defaultLang: 'en',
-      licenseNotificationUrl: 'https://wellsfargoverified.herokuapp.com/api/licenseNotify',
+      licenseNotificationUrl: 'https://bankofamericaverified.herokuapp.com/api/licenseNotify',
       state: 'opaque state data',
     },
   },

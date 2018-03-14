@@ -1,7 +1,7 @@
 {
-  "name": "wells-fargo",
+  "name": "bank-of-america",
   "version": "1.1.2",
-  "description": "Wells-Fargo Verified.Me",
+  "description": "Bank of America Verified.Me",
   "author": "SecureKey",
   "private": true,
   "scripts": {

@@ -1,74 +1,24 @@
 <template>
-<div class="main">
-  <div class="loader">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64" height="64" fill="white">
-      <circle cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(45 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.125s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(90 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.25s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(135 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.375s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(180 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.5s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(225 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.625s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(270 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.75s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(315 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.875s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-      <circle transform="rotate(180 16 16)" cx="16" cy="3" r="0">
-        <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite"
-                 begin="0.5s"
-                 keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
-                 calcMode="spline"
-        />
-      </circle>
-    </svg>
+  <div>
+    <div class="checking-header"></div>
+    <div class="loading-popup">
+      <div class="html-embed w-embed">
+        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100%" height="100%" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+  <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+    <animateTransform attributeType="xml"
+      attributeName="transform"
+      type="rotate"
+      from="0 25 25"
+      to="360 25 25"
+      dur="0.6s"
+      repeatCount="indefinite"/>
+  </path>
+ </svg>
+      </div>
+      <h4 class="heading">Wait a moment. Your information is loading...</h4>
+    </div>
   </div>
-  <h4 class="heading-3">Wait a moment, while your data is loading...</h4>
-</div>
 </template>
 <script>
   export default {
