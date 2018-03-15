@@ -287,7 +287,7 @@
 }
 
 .checking-choices__choice {
-  margin-top: 36px;
+  margin-top: 15px;
 }
 
 .choice-header {
@@ -321,7 +321,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 17px;
+  margin-top: 5px;
   padding-top: 0px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -454,6 +454,8 @@
   margin-top: 28px;
   margin-bottom: 41px;
   font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
   text-align: center;
 }
 
@@ -490,28 +492,35 @@
   -ms-flex: 1;
   flex: 1;
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(315deg, #73b1ff, #fff);
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: linear-gradient(135deg, #73b1ff, #fff);
 }
 
-.account-options__option.grey {
-  background-image: -webkit-linear-gradient(315deg, #a0a0a0, #fff);
-  background-image: linear-gradient(135deg, #a0a0a0, #fff);
+.account-options__option.transactions {
+  background-image: url('../assets/transactions.jpg');
 }
 
-.account-options__option.orange {
-  background-image: -webkit-linear-gradient(315deg, #ffb545, #fff);
-  background-image: linear-gradient(135deg, #ffb545, #fff);
+.account-options__option.profile {
+  background-image: url('../assets/accounting.jpg');
 }
 
-.account-options-__heading {
+.account-options__option.cards {
+  background-image: url('../assets/cards.jpg');
+}
+
+.account-options__heading {
   position: absolute;
-  right: 20px;
+  right: 0;
+  padding: 5px 20px 5px 10px;
+  background-color: #6b6b6b;
+  border-radius: 4px 0 0 4px;
   bottom: 20px;
   font-family: 'PT Sans', sans-serif;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.4px;
+  color: #ffffff;
 }
 
 @media (max-width: 479px) {
@@ -617,12 +626,5 @@
     margin-top: 13px;
     margin-bottom: 7px;
     line-height: 22px;
-  }
-  .account-options__option {
-    border-radius: 4px;
-  }
-  .account-options-__heading {
-    color: #494949;
-    font-weight: 700;
   }
 }
