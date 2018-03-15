@@ -1,7 +1,9 @@
 <template>
   <div v-if="userData">
-    <div class="checking-header"></div>
-    <h2 class="profile-data__header">Approve your personal information before proceeding</h2>
+    <div class="checking-header">
+      <h4 class="checking-heading">Personal information</h4>
+    </div>
+    <h4 class="profile-data__header">Approve your personal information before proceeding:</h4>
     <div class="profile-data__form w-form">
       <form id="email-form" name="email-form" class="personal-details__form">
         <label for="name">Name:</label>

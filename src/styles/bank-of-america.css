@@ -423,7 +423,8 @@
   margin-top: 12px;
   padding: 12px;
   font-weight: 400;
-  text-align: left;
+  color: #c41230;
+  text-align: center;
 }
 
 .profile-data__form {
@@ -454,7 +455,7 @@
   margin-top: 28px;
   margin-bottom: 41px;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 28px;
   text-align: center;
 }
@@ -513,14 +514,15 @@
   position: absolute;
   right: 0;
   padding: 5px 20px 5px 10px;
-  background-color: #6b6b6b;
+  background-color: rgba(255, 255, 255, .8);
   border-radius: 4px 0 0 4px;
   bottom: 20px;
   font-family: 'PT Sans', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.4px;
-  color: #ffffff;
+  color: #222222;
+  cursor: pointer;
 }
 
 @media (max-width: 479px) {

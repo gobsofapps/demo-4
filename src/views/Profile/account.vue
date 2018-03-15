@@ -3,7 +3,7 @@
     <div class="checking-header">
       <h4 class="checking-heading">Your Account</h4>
     </div>
-    <h2 class="profile-account__header">Welcome to your account, {{userData.given_name}}</h2>
+    <h4 class="profile-account__header">Welcome to your account, {{userData.given_name}}</h4>
     <div class="account-options">
       <div class="account-options__option transactions">
         <h2 class="account-options__heading">Past Transactions</h2>
