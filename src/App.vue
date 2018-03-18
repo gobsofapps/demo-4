@@ -27,7 +27,7 @@
 
   html,
   body {
-
+    height: 100%;
   }
 
   .app {

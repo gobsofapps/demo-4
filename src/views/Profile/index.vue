@@ -52,10 +52,10 @@
               :value="userData.address.postal_code"
             >
           </form>
-          <a href="#" class="button w-button">Confirm</a>
+          <router-link to="/account" class="button w-button">Confirm</router-link>
         </div>
       </div>
-      <div class="profile-info__loading">
+      <div class="profile-info__loading" v-if="!userData">
         <div class="icon-loader w-embed">
           <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewbox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
             <circle fill="#000" stroke="none" cx="30%" cy="50" r="6">

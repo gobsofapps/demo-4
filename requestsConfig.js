@@ -30,7 +30,7 @@ module.exports = {
         fr: 'French Display Text',
       },
       defaultLang: 'en',
-      licenseNotificationUrl: 'https:/citibankverified.herokuapp.com/api/licenseNotify',
+      licenseNotificationUrl: 'https://citibankverified.herokuapp.com/api/licenseNotify',
       state: 'opaque state data',
     },
   },

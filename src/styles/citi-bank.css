@@ -1,5 +1,5 @@
 .main {
-  height: 100vh;
+  height: 100%;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
 }
@@ -30,6 +30,11 @@
   background-image: linear-gradient(0deg, #1d4983, #55baed);
 }
 
+.citi-login__content {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
 .citi-logo {
   width: 120px;
   height: 120px;
@@ -37,6 +42,7 @@
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .signin-title {
@@ -71,13 +77,14 @@
   margin-top: 14px;
 }
 
-.footer {
+.citi-login__footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-shrink: 0;
   width: 100%;
-  margin-top: 22px;
+  margin-bottom: 5px;
   padding-top: 12px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -179,7 +186,7 @@
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: 6px;
+  bottom: 20px;
   width: 200px;
   margin-right: auto;
   margin-left: auto;
@@ -225,7 +232,7 @@
   border-radius: 7px;
   background-color: #fff;
   color: #0f2c6e;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .slider__package-info.black-package {
@@ -284,7 +291,7 @@
 
 .package-button {
   display: block;
-  width: 170px;
+  width: 200px;
   margin-top: 8px;
   margin-right: auto;
   margin-left: auto;
@@ -294,6 +301,7 @@
   background-color: #2f6ba9;
   text-align: center;
   letter-spacing: 0.2px;
+  font-size: 14px;
 }
 
 .package-button.verified {
@@ -322,7 +330,7 @@
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: 12px;
+  bottom: 18px;
 }
 
 .profile-info {
@@ -453,7 +461,7 @@
 
 .VueCarousel-pagination {
   position: absolute;
-  bottom: 40px;
+  bottom: 10px;
 }
 
 @media (max-width: 479px) {
