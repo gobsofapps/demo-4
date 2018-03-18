@@ -1,49 +1,118 @@
 <template>
-  <div v-if="QR">
-    <div class="checking-header">
-      <h4 class="checking-heading">Checking Accounts</h4>
-    </div>
-    <div class="hero-image">
-      <div class="bank-comparison">
-        <h4 class="bank-comparison__heading">Banking wherever and whenever you need it</h4>
-        <div>Account access at our network of financial centers, online or on the go</div><a href="#" class="button w-button">Compare Accounts</a></div>
-    </div>
-    <div class="checking-choices">
-      <div class="checking-choices__choice">
-        <h4 class="choice-header">I want to keep it simple</h4>
-        <h4 class="choice-header red">Bank of America Core Checking</h4>
-        <div class="choice-text">A straightforward personal checking solution - good for those with direct deposit.</div>
-        <div class="choice-text money">$12 or $0 monthly fee</div>
-        <div class="choice-text">Minimum balance or qualifying direct deposit required for the $0 monthly fee</div>
-        <div class="choice-text blue">View more details</div>
-        <div class="choice-buttons">
-          <a :href="QR.signInQRCode" class="choice-buttons__button verified w-button">Open with Verified.Me</a>
-          <a href="#" class="choice-buttons__button w-button">Go to Form</a></div>
-        <div class="student-discount"><img src="../../assets/student.svg" width="70" class="image">
-          <div class="text-block-2">Student? We&#x27;ll waive the monthly maintenance fee.<br><a>Learn more about eligibility</a></div>
-        </div>
-      </div>
-      <div class="checking-choices__choice">
-        <h4 class="choice-header">I want to keep it simple</h4>
-        <h4 class="choice-header red">Bank of America Interest Checking</h4>
-        <div class="choice-text">For those who keep high balances and want multiple interest-earning accounts with complimentary services.</div>
-        <div class="choice-text money">$25 or $0 monthly fee</div>
-        <div class="choice-text">Minimum balance required for the $0 monthly fee</div>
-        <div class="choice-text blue">View more details</div>
-        <div class="choice-buttons">
-          <a :href="QR.signInQRCode" class="choice-buttons__button verified w-button">Open with Verified.Me</a>
-          <a href="#" class="choice-buttons__button w-button">Go to Form</a></div>
-      </div>
-    </div>
-    <h4 class="checking-subheader">Not sure? Compare checking accounts</h4>
-    <h4 class="checking-subheader second">Small business owners, <a class="link">search checking options</a> for your business</h4>
+  <div style="height:100%">
+    <router-link to="/" class="back-link w-inline-block">
+      <div class="back-icon"></div>
+      <div class="back-text">Back</div>
+    </router-link>
+    <carousel class="citi-slider" :perPage="1" :paginationActiveColor="'#ffffff'" :paginationColor="'#c8c8c8'">
+        <slide class="slide w-slide">
+          <h3 class="slide-header">There&#x27;s a Citi account for everybody. Find the one.</h3>
+          <div class="slider__text">Our range of checking options gives you access to the good stuff: personalized insights, easy access to your accounts, and snart tech to help you manage your money like a pro.</div>
+          <div class="slider__text-with-icon">
+            <div class="icon"></div>
+            <div class="text">10 Minutes to apply</div>
+          </div>
+          <div class="bottom-text">Swipe to Start</div>
+        </slide>
+        <slide class="slide w-slide">
+          <div class="bottom-text">Access to the Citi Mobile® App requires a Citi Account.</div>
+          <div class="slider__package-info">
+            <h4 class="package-info__header">Access Account Package</h4>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">$10 monthly service fee*</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">No overdraft fess</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">No paper checks</div>
+            </div>
+            <div class="package-info__text">*Waived if you make one qualifying direct deposit per statement period or one qualifying bill payment per statement period or maintain a $1,500+ combined average monthly balance in eligible linked accounts.</div>
+            <div class="buttons-container">
+              <a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a>
+              <a href="#" class="package-button w-button">Go to Form</a></div>
+          </div>
+          <h5 class="pick-checking-account">Pick a Checking Account</h5>
+        </slide>
+        <slide class="slide w-slide">
+          <div class="bottom-text">Access to the Citi Mobile® App requires a Citi Account.</div>
+          <div class="slider__package-info">
+            <h4 class="package-info__header">Basic Banking Package</h4>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">$12 monthly service fee*</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">Unlimited check writing</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">Special perks for those 62 and older</div>
+            </div>
+            <div class="package-info__text">*Waived if you make one qualifying direct deposit per statement period or one qualifying bill payment per statement period or maintain a $1,500+ combined average monthly balance in eligible linked accounts. Fee also waived for first listed account owner ages 62 or older.</div>
+            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><a href="#" class="package-button w-button">Go to Form</a></div>
+          </div>
+          <h5 class="pick-checking-account">Pick a Checking Account</h5>
+        </slide>
+        <slide class="slide w-slide">
+          <div class="bottom-text">Access to the Citi Mobile® App requires a Citi Account.</div>
+          <div class="slider__package-info">
+            <h4 class="package-info__header">Citibank Account Package</h4>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">$25 monthly service fee*</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">No Citi fee at non-Citi ATMs*</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">Eligible customers can earn ThankYou® Points with this account package</div>
+            </div>
+            <div class="package-info__text">*Waived if you maintain a combined average monthly balance of $10,000+ in eligible linked deposit, retirement and investment accounts.</div>
+            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><a href="#" class="package-button w-button">Go to Form</a></div>
+          </div>
+          <h5 class="pick-checking-account">Pick a Checking Account</h5>
+        </slide>
+        <slide class="slide black-slide w-slide">
+          <div class="bottom-text">Access to the Citi Mobile® App requires a Citi Account.</div>
+          <div class="slider__package-info black-package">
+            <h4 class="package-info__header">Citibank Account Package</h4>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">$30 monthly service fee*</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">Preferred pricing &amp; rates on select products &amp; services</div>
+            </div>
+            <div class="package-info__benefits">
+              <div class="benefit-icon"></div>
+              <div class="text-block">Helpful resources &amp; tools</div>
+            </div>
+            <div class="package-info__text">*Waived if you maintain a combined average monthly balance of $50,000+ in eligible linked deposit, retirement and investment accounts.</div>
+            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><a href="#" class="package-button black-button w-button">Go to Form</a></div>
+          </div>
+          <h5 class="pick-checking-account">Pick a Checking Account</h5>
+        </slide>
+    </carousel>
   </div>
 </template>
 <script>
   import { mapActions, mapState } from 'vuex';
+  import { Carousel, Slide } from 'vue-carousel';
 
   export default {
     name: 'CheckingAccount',
+    components: {
+      Carousel,
+      Slide,
+    },
     computed: {
       ...mapState([
         'QR',

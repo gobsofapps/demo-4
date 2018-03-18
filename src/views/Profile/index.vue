@@ -1,61 +1,92 @@
 <template>
-  <div v-if="userData">
-    <div class="checking-header">
-      <h4 class="checking-heading">Personal information</h4>
-    </div>
-    <h4 class="profile-data__header">Approve your personal information before proceeding:</h4>
-    <div class="profile-data__form w-form">
-      <form id="email-form" name="email-form" class="personal-details__form">
-        <label for="name">Name:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               :value="userData.given_name"
-               name="name"
-               id="name">
-        <label for="surname">Surname:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               :value="userData.family_name"
-               name="surname"
-               id="surname">
-        <label for="email">Email:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               name="email"
-               :value="userData.email"
-               id="email">
-        <label for="phone_number">Phone Number:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               :value="userData.phone_number"
-               name="phone_number" id="phone_number">
-        <label for="address">Address:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               name="address"
-               :value="userData.address.street_address"
-               id="address">
-        <label for="postal-code">Address:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               name="address"
-               :value="userData.address.postal_code"
-               id="postal-code">
-        <label for="country">Country of Residence:</label>
-        <input type="text"
-               class="w-input"
-               maxlength="256"
-               name="country"
-               value="USA"
-               id="country">
-        <router-link to="/account" class="personal-data__confirm w-button">Confirm</router-link>
-      </form>
+  <div class="profile-info">
+    <div class="profile-info__block">
+      <div class="profile-info__data" v-if="userData">
+        <h4 class="heading">Please verify your personal information to proceed further:</h4>
+        <div class="form-block w-form">
+          <form id="email-form" name="email-form" data-name="Email Form">
+            <label for="name">First Name:</label>
+            <input type="text"
+                   class="input-field w-input"
+                   maxlength="256" name="name"
+                   data-name="Name"
+                   id="name"
+                   :value="userData.given_name">
+            <label for="surname">Second Name:</label>
+            <input
+              type="text"
+              class="input-field w-input"
+              maxlength="256"
+              name="surname"
+              data-name="surname"
+              id="surname"
+              :value="userData.family_name"
+            >
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              class="input-field w-input"
+              maxlength="256"
+              name="address"
+              data-name="address"
+              id="address"
+              :value="userData.address.street_address"
+            >
+            <label for="phone">Phone:</label>
+            <input
+              type="text"
+              class="input-field w-input"
+              maxlength="256"
+              name="phone"
+              data-name="phone"
+              id="phone"
+              :value="userData.address.street_address"
+            >
+            <label for="postal">Postal Code:</label>
+            <input
+              type="text"
+              class="input-field w-input"
+              maxlength="256"
+              name="postal"
+              id="postal"
+              :value="userData.address.postal_code"
+            >
+          </form>
+          <a href="#" class="button w-button">Confirm</a>
+        </div>
+      </div>
+      <div class="profile-info__loading">
+        <div class="icon-loader w-embed">
+          <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewbox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+            <circle fill="#000" stroke="none" cx="30%" cy="50" r="6">
+    <animate
+      attributeName="opacity"
+      dur="1s"
+      values="0;1;0"
+      repeatCount="indefinite"
+      begin="0.1"/>
+  </circle>
+  <circle fill="#000" stroke="none" cx="50%" cy="50" r="6">
+    <animate
+      attributeName="opacity"
+      dur="1s"
+      values="0;1;0"
+      repeatCount="indefinite"
+      begin="0.2"/>
+  </circle>
+  <circle fill="#000" stroke="none" cx="70%" cy="50" r="6">
+    <animate
+      attributeName="opacity"
+      dur="1s"
+      values="0;1;0"
+      repeatCount="indefinite"
+      begin="0.3"/>
+  </circle>
+          </svg>
+        </div>
+        <div class="loading-text">Loading...</div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -63,6 +94,9 @@
   import { mapGetters } from 'vuex';
 
   export default {
+    created() {
+      this.$store.dispatch('getUserData');
+    },
     computed: {
       ...mapGetters([
         'userData',

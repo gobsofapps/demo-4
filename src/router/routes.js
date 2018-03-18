@@ -1,7 +1,6 @@
 import Empty from '@/views/Empty';
 import Home from '@/views/Home';
 import Profile from '@/views/Profile';
-import UserVerified from '@/views/Profile/user-verified';
 import RedirectPage from '@/views/RedirectPage';
 import Account from '@/views/Profile/account';
 import CheckingAccount from '@/views/CheckingAccount';
@@ -29,12 +28,6 @@ export default [
     path: '/account',
     components: {
       default: Account,
-    },
-  },
-  {
-    path: '/user-verified',
-    components: {
-      default: UserVerified,
     },
   },
   {
