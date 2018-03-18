@@ -7,7 +7,7 @@
 
   export default {
     mounted() {
-      window.location.href = 'https://citibankverified.herokuapp.com/profile';
+      window.location.href = 'citibank://open.my.app?url_launch=https://citibankverified.herokuapp.com/profile';
     },
     methods: {
       redirectToURL() {
