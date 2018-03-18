@@ -26,7 +26,7 @@ module.exports = {
         ],
       },
       displayText: {
-        en: 'Please share your information with Wells Fargo',
+        en: 'Please share your information with Citi Bank',
         fr: 'French Display Text',
       },
       defaultLang: 'en',

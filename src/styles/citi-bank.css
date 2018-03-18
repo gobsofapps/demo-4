@@ -429,7 +429,7 @@
 }
 
 .welcome-account {
-  margin-top: 39px;
+  margin-top: 20px;
   padding: 22px;
   border-radius: 2px;
   background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .96), hsla(0, 0%, 100%, .96));
@@ -440,7 +440,7 @@
 }
 
 .control-panel {
-  margin-top: 52px;
+  margin-top: 70px;
   padding: 27px;
   border-radius: 2px;
   background-color: hsla(0, 0%, 100%, .8);
