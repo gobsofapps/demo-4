@@ -1,5 +1,6 @@
 <template>
   <div class="profile-info">
+    <div class="profile-logo"></div>
     <div class="profile-info__block">
       <div class="profile-info__data" v-if="userData">
         <h4 class="heading">Please verify your personal information to proceed further:</h4>
