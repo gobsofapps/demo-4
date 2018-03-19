@@ -186,7 +186,7 @@
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: 20px;
+  bottom: 70px;
   width: 200px;
   margin-right: auto;
   margin-left: auto;
@@ -227,7 +227,7 @@
 
 .slider__package-info {
   position: relative;
-  height: 400px;
+  height: 430px;
   padding: 17px 30px;
   border-radius: 7px;
   background-color: #fff;
@@ -461,7 +461,17 @@
 
 .VueCarousel-pagination {
   position: absolute;
-  bottom: 10px;
+  bottom: 110px;
+}
+
+.profile-logo {
+  width: 100px;
+  height: 50px;
+  background-image: url('../assets/citi-bank.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 30px;
 }
 
 @media (max-width: 479px) {
