@@ -37,17 +37,17 @@ const mutations = {
 const actions = {
   getUserData({ commit, state }) {
     if (!state.userDataFetched) {
-      commit('USER_DATA_REQUEST');
+      commit(USER_DATA_REQUEST);
       axios.post('/api/get-user')
         .then((response) => {
           if (response.data) {
-            commit('USER_DATA_REQUEST_SUCCEED', response.data);
+            commit(USER_DATA_REQUEST_SUCCEED, response.data);
             router.push('/profile');
           }
         })
         .catch((error) => {
           console.error(error);
-          commit('USER_DATA_REQUEST_FAILED');
+          commit(USER_DATA_REQUEST_FAILED);
         });
     }
   },

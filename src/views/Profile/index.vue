@@ -31,7 +31,7 @@
               name="address"
               data-name="address"
               id="address"
-              :value="userData.address.street_address"
+              :value="userData.address ? userData.address.street_address : userData.street_address"
             >
             <label for="phone">Phone:</label>
             <input
@@ -41,7 +41,7 @@
               name="phone"
               data-name="phone"
               id="phone"
-              :value="userData.address.street_address"
+              :value="userData.phone_number"
             >
             <label for="postal">Postal Code:</label>
             <input
@@ -50,7 +50,7 @@
               maxlength="256"
               name="postal"
               id="postal"
-              :value="userData.address.postal_code"
+              :value="userData.address ? userData.address.postal_code : userData.postal_code"
             >
           </form>
           <router-link to="/account" class="button w-button">Confirm</router-link>

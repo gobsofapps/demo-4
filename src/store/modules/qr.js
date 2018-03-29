@@ -27,16 +27,16 @@ const mutations = {
 
 const actions = {
   getSignInQRCode({ commit }) {
-    commit('QR_SIGN_IN_REQUEST');
+    commit(QR_SIGN_IN_REQUEST);
     axios.post('/api/licenseRequest')
       .then((response) => {
         if (response) {
-          commit('QR_SIGN_IN_REQUEST_SUCCEED', response.data);
+          commit(QR_SIGN_IN_REQUEST_SUCCEED, response.data);
         }
       })
       .catch((error) => {
         console.error(error);
-        commit('QR_SIGN_IN_REQUEST_FAILED');
+        commit(QR_SIGN_IN_REQUEST_FAILED);
       });
   },
 };

@@ -33,7 +33,7 @@
             <div class="package-info__text">*Waived if you make one qualifying direct deposit per statement period or one qualifying bill payment per statement period or maintain a $1,500+ combined average monthly balance in eligible linked accounts.</div>
             <div class="buttons-container">
               <a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a>
-              <a href="#" class="package-button w-button">Go to Form</a></div>
+              <div @click='authorizeUser()' class="package-button black-button w-button">Go to Form</div></div>
           </div>
           <h5 class="pick-checking-account">Pick a Checking Account</h5>
         </slide>
@@ -54,7 +54,7 @@
               <div class="text-block">Special perks for those 62 and older</div>
             </div>
             <div class="package-info__text">*Waived if you make one qualifying direct deposit per statement period or one qualifying bill payment per statement period or maintain a $1,500+ combined average monthly balance in eligible linked accounts. Fee also waived for first listed account owner ages 62 or older.</div>
-            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><a href="#" class="package-button w-button">Go to Form</a></div>
+            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><div @click='authorizeUser()' class="package-button black-button w-button">Go to Form</div></div>
           </div>
           <h5 class="pick-checking-account">Pick a Checking Account</h5>
         </slide>
@@ -75,7 +75,7 @@
               <div class="text-block">Eligible customers can earn ThankYou® Points with this account package</div>
             </div>
             <div class="package-info__text">*Waived if you maintain a combined average monthly balance of $10,000+ in eligible linked deposit, retirement and investment accounts.</div>
-            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><a href="#" class="package-button w-button">Go to Form</a></div>
+            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><div @click='authorizeUser()' class="package-button black-button w-button">Go to Form</div></div>
           </div>
           <h5 class="pick-checking-account">Pick a Checking Account</h5>
         </slide>
@@ -96,8 +96,9 @@
               <div class="text-block">Helpful resources &amp; tools</div>
             </div>
             <div class="package-info__text">*Waived if you maintain a combined average monthly balance of $50,000+ in eligible linked deposit, retirement and investment accounts.</div>
-            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><a href="#" class="package-button black-button w-button">Go to Form</a></div>
+            <div class="buttons-container"><a :href="QR.signInQRCode" class="package-button verified w-button">Apply with Verified.Me</a><div @click='authorizeUser()' class="package-button black-button w-button">Go to Form</div></div>
           </div>
+          <h5 class="pick-checking-account">Pick a Checking Account</h5>
           <h5 class="pick-checking-account">Pick a Checking Account</h5>
         </slide>
     </carousel>
@@ -122,6 +123,9 @@
       ...mapActions([
         'getSignInQRCode',
       ]),
+      authorizeUser() {
+        this.$store.dispatch('authorizeUser');
+      },
     },
     mounted() {
       this.getSignInQRCode();
